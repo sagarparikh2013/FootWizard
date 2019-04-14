@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>FootWizards</title>
+
+  <!-- Font Awesome Icons -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+  <!-- Plugin CSS -->
+  <link href="static/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+  <!-- Theme CSS - Includes Bootstrap -->
+  <link href="static/css/creative.min.css" rel="stylesheet">
+
+
+  <script>
+function image_selection(idname) {
+  var x = document.getElementById(idname).value;
+  document.getElementById("image_selection_"+idname).src="static/img/"+x+".png";
+}
+
+
+
+
+function predict_final(x){
+  // var x = document.getElementById(x2).value;
+
+
+  if(x=="draw")
+    document.getElementById("image_predict").src="static/img/8455.png";
+  else if(x=="win")
+  document.getElementById("image_predict").src="static/img/8654.png";
+else
+  document.getElementById("image_predict").src="static/img/8344.png";
+}
+</script>
+  <style>
+  	
+
+.try_it {
+		-webkit-animation: rotation 3s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+		
+		to {
+				-webkit-transform: rotateY(360deg);
+		}
+}
+
+#pic2overlay {position:absolute; top:0; left:0; z-index:3;}
+
+  </style>
+
+</head>
+
+<body id="page-top" >
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="http://127.0.0.1:5000/" >FootWizards</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto my-2 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="https://www.google.com/search?q=premier+league+2019+table&rlz=1C1CHBF_enCA831CA831&oq=premier+league+2019+table&aqs=chrome..69i57j69i60l2j0l3.6738j0j9&sourceid=chrome&ie=UTF-8#sie=lg;/g/11f60x_ln9;2;/m/02_tc;st;fp;1;;" target="_blank">Points Table</a>
+
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  <!-- Masthead -->
+  <header class="masthead">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center justify-content-center text-center">
+        <div class="col-lg-10 align-self-end">
+        	<img  src="static/img/logo4.png" class="img-rounded" width="20%" >
+          <h1 class="text-uppercase text-white font-weight-bold">PREDICT THE UNPREDICTABLE</h1>
+          <hr class="divider my-4">
+        </div>
+        <div class="col-lg-8 align-self-baseline">
+
+
+<!-- {{ valuexx }} -->
+<form class="w-100" action="index.html" method="POST">
+<select class="btn btn-secondary btn-primary dropdown-toggle" id="home" name="home" onchange='image_selection("home")'>
+  <option selected="true" disabled="disabled" data-thumbnail='static/img/other.png'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select Home Team&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+<option value="9825">Arsenal</option>
+<option value="8678">Bournemouth</option>
+<option value="8191">Burnley</option>
+<option value="8344">Cardiff City</option>
+<option value="8455">Chelsea</option>
+<option value="9826">Crystal Palace</option>
+<option value="8668">Everton</option>
+<option value="9879">Fulham</option>
+<option value="8197">Leicester City</option>
+<option value="8650">Liverpool</option>
+<option value="8456">Manchester City</option>
+<option value="10260">Manchester United</option>
+<option value="10261">Newcastle United</option>
+<option value="8466">Southampton</option>
+<option value="8586">Tottenham Hotspur</option>
+<option value="9817">Watford</option>
+<option value="8654">West Ham United</option>
+<option value="8602">Wolverhampton Wanderers</option>
+
+
+</select>
+<select class="btn btn-secondary btn-primary dropdown-toggle" id="away" name="away" onchange='image_selection("away")'>
+  <option selected="true" disabled="disabled">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select Away Team&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+<option value="9825">Arsenal</option>
+<option value="8678">Bournemouth</option>
+<option value="8191">Burnley</option>
+<option value="8344">Cardiff City</option>
+<option value="8455">Chelsea</option>
+<option value="9826">Crystal Palace</option>
+<option value="8668">Everton</option>
+<option value="9879">Fulham</option>
+<option value="8197">Leicester City</option>
+<option value="8650">Liverpool</option>
+<option value="8456">Manchester City</option>
+<option value="10260">Manchester United</option>
+<option value="10261">Newcastle United</option>
+<option value="8466">Southampton</option>
+<option value="8586">Tottenham Hotspur</option>
+<option value="9817">Watford</option>
+<option value="8654">West Ham United</option>
+<option value="8602">Wolverhampton Wanderers</option>
+</select>
+<br>
+<br>
+
+          <img id="image_selection_home" src="static/img/other.png" class="img-rounded try_it" width="25%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<input type="submit" id="predict_final_id"  onclick="predict_final()"  class="btn btn-primary w-25" value="Predict">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <img id="image_selection_away" src="static/img/other.png" class="img-rounded try_it" width="25%" >
+   </form>     
+
+<br>
+<br>
+<!-- <img id="image_predict" src="static/img/other.png" class="img-rounded try_it" width="50%" > -->
+<div class="col-lg-12 align-self-end">
+          <h3 class="text-uppercase text-white font-weight-bold align-items-center justify-content-center text-center">{{ valuexx}}</h3>
+        </div>
+      
+</div>
+</div>
+</div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="page-section bg-danger" style='background-image:url("static/img/vis3.jpg")' id="about">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12 text-center">
+          <h1 class="text-black mt-0">Meet The FootWizards!</h1>
+          <hr class="divider light my-4">
+  <div class="container-fluid p-0">
+      <div class="row-100 no-gutters align-items-center justify-content-center text-center">
+
+        <div class="col-lg-12 col-sm-6">
+          
+            <img class="img-fluid shadow p-2 mb-1 bg-white rounded" src="static/img/sorcerer.jpg" alt="">
+            
+          
+        </div>
+        <div class="container-fluid p-0">
+      <div class="row no-gutters shadow p-2 mb-1 bg-white rounded">
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" href="static/img/portfolio/fullsize/1.jpg">
+            <img class="img-fluid" src="static/img/abhi.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="project-category text-white-50">
+              </div>
+              <div class="project-name">
+              Abhi Savaliya
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" href="static/img/portfolio/fullsize/2.jpg">
+            <img class="img-fluid" src="static/img/Chirayu.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="project-category text-white-50">
+             
+              </div>
+              <div class="project-name">
+                Chirayu Shah
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" href="static/img/portfolio/fullsize/3.jpg">
+            <img class="img-fluid" src="static/img/Sagar.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="project-category text-white-50">
+           
+              </div>
+              <div class="project-name">
+                Sagar Parikh
+              </div>
+            </div>
+          </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+      </div>
+    </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="static/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="static/js/creative.min.js"></script>
+
+
+
+
+</body>
+
+</html>
